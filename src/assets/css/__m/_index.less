@@ -1,0 +1,273 @@
+@import "_base";
+@fontSize:18px;
+body {
+  background-color: #d9e0e7;
+}
+#app {
+  height: 100%;
+  overflow: hidden;
+  .layout-content {
+    height:100%;
+    overflow: auto;
+  }
+  .header.ivu-row-flex + .ivu-row-flex{
+    height: calc(~"100% - 70px");
+  }
+}
+
+.tree-menu.tree-sub .select-node span.node-text:before {
+  border-color: #348fe2;
+}
+.tree-menu.tree-sub  li:hover{
+   span.node-text:before {
+    border-color: #348fe2;
+  }
+}
+.tree-menu.tree-sub  span.node-text:before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #a8acb1;
+  border-radius: 10px;
+}
+.ivu-row-flex{
+  flex-wrap: nowrap;
+}
+.layout-menu-left, .layout-menu-right{
+  height: 100%;
+  transition: width .2s ease-in-out, font-size .2s ease-in-out;
+}
+.layout-menu-left{
+  font-size:30px;
+  /*个人信息*/
+  .persional-info {
+    font-size: 12px;
+    padding:30px 0;
+    text-align: center;
+    color:#348fe2;
+    background-color: transparent;
+    h3 {
+      font-size:@fontSize;
+      line-height: 20px;
+      font-weight:500;
+    }
+    .img-wrap {
+      line-height:80px;
+      margin:auto;
+      img {
+        width: 100%;
+      }
+      i {
+        font-size:80px;
+        color: #999;
+      }
+    }
+    p span:last-of-type {
+      margin-left: 15px;
+    }
+    p span.show {
+      display: block;
+    }
+    p span:last-of-type.show {
+      margin-left: 0;
+    }
+  }
+  &.bg-color {
+    background: @color-bg-slidebar;
+    border-right:1px solid  @color-bottom-slide;
+    .layout-logo-left {
+      border-right: 0;
+    }
+  }
+  .layout-logo-left{
+    height: 70px;
+    line-height: 70px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background: @color-bg-header;
+    border-bottom: 1px solid @color-bottom-slide;
+    border-right: 1px solid @color-bottom-slide;
+  }
+  .ivu-menu-light {
+    background-color: @color-bg-slidebar;
+  }
+  .ivu-menu-submenu-title {
+    color:@color-font-slidebar;
+    border-bottom:1px solid #353d44;
+    .icon-Smartmarketing{
+      font-size:13px;
+    }
+  }
+  .ivu-menu-submenu {
+    position: relative;
+  }
+  .ivu-menu-submenu.ivu-menu-opened .ivu-menu-submenu-title {
+    color: #fff;
+    background-color: @color-active-font ;
+  }
+  .ivu-menu-submenu .ivu-menu {
+    background-color: @color-bg-header;
+    .ivu-menu-item {
+      border-bottom:1px solid #232b32;
+    }
+  }
+}
+.layout-menu-right {
+  flex:1;
+  flex-shrink:1;
+  min-width: 800px;
+  background-color: #d9e0e7;
+  .layout-header{
+    height: 70px;
+    line-height:70px;
+    font-size: @fontSize;
+    color: @color-font-header;
+    background: @color-bg-header;
+    box-sizing: border-box;
+    .header-switch {
+      font-size:40px;
+      color:@color-font-header;
+      height:70px;
+      line-height: 70px;
+      border:0 none;
+      border-right:1px solid @color-bottom-slide;
+      border-radius:0;
+      padding:0 35px;
+      .icon-quanbushangpin {
+        font-size:32px;
+      }
+    }
+    .more-action{
+      @hit-padding: 5px;
+      position: absolute;
+      z-index: 10;
+      right: 40px;
+      top: (70px - 18px - @hit-padding) / 2;
+      box-sizing: content-box;
+      line-height: 1;
+      cursor: pointer;
+      color:@color-font-header;
+      a {
+        display: inline-block;
+        color:@color-font-header;
+      }
+      i {
+        padding: @hit-padding;
+        font-size:18px;
+        font-weight:700;
+      }
+      .ivu-icon-ios-help-outline {
+        margin-right:5px;
+      }
+      .ivu-select-dropdown {
+        margin:5px -40px;
+      }
+    }
+    .ivu-menu-light {
+      background-color: @color-bg-header;
+      border-bottom:1px solid @color-bottom-slide;
+    }
+    .ivu-menu-horizontal {
+      font-size: @fontSize;
+      height: 70px;
+      line-height: 70px;
+    }
+    .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu{
+      color:@color-font-header;
+    }
+    .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:nth-of-type(4) {
+      color: @color-active-font;
+      border-bottom-color:  @color-active-font;
+    }
+    .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover {
+      color: @color-active-font;
+      border-bottom-color:  @color-active-font;
+    }
+    .layout-menu-right .layout-header .ivu-menu-light.ivu-menu-horizontal .not-open.ivu-menu-item-active, .layout-menu-right .layout-header .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover, .layout-menu-right .layout-header .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active.not-open, .layout-menu-right .layout-header .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover{
+      color:#b0b0b0;
+    }
+    .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu {
+      height: 70px;
+      line-height: 70px;
+      border-bottom-width: 3px;
+      border-left: 1px solid #484e54;
+    }
+    .ivu-menu-item.item-last:last-of-type {
+      border-right: 1px solid #484e54;
+    }
+    .ivu-menu-horizontal.ivu-menu-light:after {
+      height: 0;
+    }
+    .layout-nav{
+      .ivu-menu-item {
+        font-size: @fontSize;
+        padding:0 20px;
+        cursor: pointer;
+      }
+      .not-open {
+        color: #b0b0b0 !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+    .ivu-tooltip-inner {
+      font-size:16px;
+    }
+  }
+  .layout-content{
+    height: 100%;
+    .layout-content-main {
+      height:100%;
+    }
+  }
+}
+
+// 树菜单样式
+.tree-list-root{
+  &.mini-icon .tree-item{
+    text-align: center;
+    .node-text{
+      display: none;
+    }
+  }
+}
+.tree-menu .tree-item .node-arrow {
+  top:8px;
+}
+.tree-menu .tree-item  .icon.icon-Plotoverview{
+  margin-right:10px;
+  margin-left:2px;
+}
+.tree-menu .tree-item  .icon.icon-dataoverview {
+  font-size:14px;
+}
+@media (max-width:1470px){
+  .layout-menu-left{
+    font-size: 20px;
+  }
+  .layout-menu-right .layout-header .layout-nav .ivu-menu-item{
+    font-size: 16px;
+  }
+}
+.more-drop {
+  min-width: 80px;
+  color: #333;
+  li:hover {
+    background-color:@color-active-font ;
+    color: #fff;
+  }
+  .ivu-dropdown-item {
+    padding:0;
+    text-align: center;
+    line-height: 24px;
+  }
+}
+.ivu-spin-fix {
+  background-color: transparent;
+}
+.ivu-tooltip-popper[x-placement^=bottom] .ivu-tooltip-arrow {
+  border-bottom-color: #1a2229;
+}
+

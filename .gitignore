@@ -1,0 +1,8 @@
+.idea
+/temp
+/projects
+/sys
+/node_modules
+/test
+/bin/test.*
+/npm-debug.log

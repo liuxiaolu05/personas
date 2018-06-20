@@ -1,0 +1,200 @@
+@import "../__m/_base";
+@import "../__m/layout";
+//人群管理列表样式
+
+.ivu-modal-body {
+  padding:0;
+  .ivu-modal-confirm {
+    padding:0;
+    .ivu-modal-confirm-head {
+      padding: 0 16px;
+      line-height: 33px;
+      background-color: #1a2229;
+      .ivu-modal-confirm-head-title {
+        color: #fff;
+      }
+    }
+    .ivu-modal-confirm-body {
+      position: relative;
+      margin-top: 6px;
+      padding-top: 18px;
+      padding-left: 48px;
+      font-size: 12px;
+      color: #495060;
+      .ivu-modal-confirm-body-icon.ivu-modal-confirm-body-icon-confirm {
+        padding:0 16px;
+      }
+        div:nth-child(2) {
+        padding-left:15px;
+      }
+    }
+    .ivu-modal-confirm-footer {
+      padding-right: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+}
+.crowd-list {
+  .table {
+    a {
+      display: inline-block;
+    }
+    .gap-sm.groups>*, .gap-sm.inline-group, .gap-sm.inline-groups>* {
+      margin-right:0;
+      margin-left:10px;
+    }
+  }
+  .category{
+    border: 1px solid rgb(204, 204, 204);
+    vertical-align: middle;
+    width:200px;
+    height:32px;
+    line-height: 32px;
+    padding:4px 10px;
+    box-sizing: border-box;
+    .ivu-tag {
+      margin:0 5px 0 0;
+      vertical-align: baseline;
+    }
+  }
+  .cover {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    vertical-align: middle;
+
+  }
+  .ivu-input-wrapper{
+   // width: 100%;
+    height:unset;
+    line-height:32px;
+    //margin: 0 5px;
+    //margin-bottom:20px;
+    .ivu-input-group-append, .ivu-input-group-prepend {
+      padding:0;
+      .ivu-icon {
+        cursor: pointer;
+        font-size:20px;
+      }
+    }
+
+  }
+  .ivu-tabs-bar {
+    margin-bottom: 0;
+    border-bottom:0;
+  }
+  .ivu-tabs-content {
+    border:1px solid #ccc;
+    height:270px;
+  }
+  .ivu-tabs-tabpane {
+    overflow-y: auto;
+    a {
+      width:85px;
+      margin:0 5px;
+    }
+  }
+}
+//创建人群样式
+.stage {
+  //其他场景样式
+  .selection {
+    width:200px;
+    .drop-list {
+      overflow: hidden;
+    }
+  }
+  .ivu-form .vip-range.ivu-form-item:last-of-type {
+    border-bottom: 0;
+  }
+  .panel {
+    .t-center {
+      .ivu-input {
+        text-align: center;
+      }
+
+    }
+    .lost .ivu-tooltip-popper {
+        top: -115px;
+      }
+    .loyalty .ivu-tooltip-popper {
+      top: -80px;
+    }
+    .vip-value .ivu-tooltip-popper {
+      top: -150px;
+    }
+  }
+  //其他场景checkbox-group
+  .ivu-checkbox-group {
+    display: inline-block;
+  }
+  .vip-range.ivu-form-item{
+    background-color: transparent;
+    border:0;
+    .ivu-form-item-content {
+      padding-left:0;
+      border:0;
+    }
+  }
+  .cat-pre ,.brand-pre {
+     .ivu-select-dropdown {
+       max-height:260px;
+     }
+  }
+  .ivu-checkbox-checked  .ivu-checkbox-inner {
+    border-color:#3498db;
+  }
+
+  .ivu-checkbox-checked:hover .ivu-checkbox-inner,.ivu-radio-checked .ivu-radio-inner, .ivu-radio-checked:hover .ivu-radio-inner {
+    border-color: #3498db;
+  }
+  .ivu-checkbox-checked .ivu-checkbox-inner {
+    background-color: #3498db;
+  }
+  .ivu-radio-inner:after {
+    background-color: #3498db;
+  }
+}
+//查看页面样式
+.detail {
+  .panel {
+    .ivu-form .ivu-form-item {
+      min-height:40px;
+    }
+    .ivu-form .ivu-form-item-content {
+      min-height:40px;
+      line-height:40px;
+    }
+  }
+}
+
+//重写复选框 单选按钮的字体大小
+.ivu-select-input,.ivu-input,.ivu-checkbox-wrapper,.ivu-radio-group, .ivu-radio-wrapper,.ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+  font-size:14px;
+}
+.ivu-checkbox-wrapper {
+  margin-right:20px;
+}
+.ivu-checkbox+span, .ivu-checkbox-wrapper+span {
+  margin-right:0;
+}
+.ivu-tooltip-popper {
+  display: none;
+  position: absolute;
+  left: 16px;
+  top: -27px;
+  transform-origin: center bottom 0px;
+}
+.ivu-tooltip:hover {
+  cursor: pointer;
+  .ivu-tooltip-popper {
+    display: block;
+  }
+}
+@media screen and(max-width:1366px){
+  .groups .w-lg {
+    width:140px;
+   }
+}

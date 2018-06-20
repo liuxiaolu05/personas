@@ -1,0 +1,138 @@
+/*布局样式集合。
+普通的排列布局
+  .group, block布局, 每个group和group之间具有一定的垂直间距
+  .inline-group, inline-block布局, 每个inline-group和inline-group之间具有一定的水平间距
+
+  .groups, block布局, 内部的直接子元素全部继承.inline-group的样式
+  .groups-block, block布局, 直接子元素全部是.group布局
+
+  .inline-groups, inline-block布局, 内部的直接子元素全部继承.inline-group的样式
+  .inline-groups-block, inline-block布局, 直接子元素全部是.group布局
+
+  块样式可以和块样式混用：.group, .groups, .groups-block
+    .group + .group, .groups + .groups, .groups-block + .groups-block,
+    .group + .groups, .group + .groups-block,
+    .groups + .group, .groups + .groups-block,
+    .groups-block + .group, .groups-block + .groups
+  行样式可以和行样式混用：.inline-group, .inline-groups, .inline-groups-block
+    .inline-group + .inline-group, .inline-groups + .inline-groups, .inline-groups-block + .inline-groups-block,
+    .inline-group + .inline-groups, .inline-group + .inline-groups-block,
+    .inline-groups + .inline-group, .inline-groups + .inline-groups-block,
+    .inline-groups-block + .inline-group, .inline-groups-block + .inline-groups
+
+flex布局
+  .flex-groups，flex布局，子元素垂直居中
+  .inline-flex-groups, inline-flex布局，子元素垂直居中
+
+*/
+@import "_base";
+
+@hgap: 20px;
+@vgap: 20px;
+@sm-hgap: 10px;
+@sm-vgap: 10px;
+.group, .groups, .groups-block{
+  display: block;
+}
+.inline-group, .inline-groups, .inline-groups-block{
+  display: inline-block;
+}
+.group{
+  display: block;
+  margin-bottom: @vgap;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.groups-block, .inline-groups-block{
+  >*{
+    .group;
+  }
+}
+.inline-group{
+  display: inline-block;
+  margin-right: @hgap;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.groups, .inline-groups{
+  >*{
+    .inline-group;
+  }
+}
+
+.flex-groups{
+  display: flex;
+}
+.inline-flex-groups{
+  display: inline-flex;
+}
+.flex-groups, .inline-flex-groups{
+  margin-bottom: 0 - @vgap;
+  margin-right: 0 - @hgap;
+  align-items: center;
+  >*{
+    margin-bottom: @vgap;
+    margin-right: @hgap;
+  }
+  &.pull-left, .pull-left{
+    justify-content: flex-start;
+  }
+  &.pull-right, .pull-right{
+    justify-content: flex-end;
+  }
+}
+
+/* group系列的间距尺寸 start */
+.m-gap-size;
+.m-gap-size(){
+  .gap-sm{
+    &.group{
+      margin-bottom: @sm-hgap;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    &.groups-block, &.inline-groups-block{
+      >*{
+        margin-bottom: @sm-hgap;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.inline-group{
+      margin-right: @sm-hgap;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    &.groups, &.inline-groups{
+      >*{
+        margin-right: @sm-hgap;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+/* group系列的间距尺寸 end */
+//输入框大小
+@sm-w: 80px;
+@md-w: 160px;
+@lg-w: 200px;
+@260-w:260px;
+.w-sm{
+  width: @sm-w;
+}
+.w-md{
+  width: @md-w;
+}
+.w-lg{
+  width: @lg-w;
+}
+.w-260{
+  width:260px;
+}

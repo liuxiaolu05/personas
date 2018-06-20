@@ -1,0 +1,53 @@
+@import "__style/normal";
+//@import (inline)"font-awesome.min.css";
+@import (inline)"__m/iconfont.css";
+@import "__m/_base";
+@import "__m/_box";
+@import "__m/_i";
+@import "__m/layout";
+@import "__m/_form";
+@import "__m/_user";
+@import "__style/tip";
+@import "__m/_tooltip";
+@import "__m/_modal";
+@import "__m/_index";
+@import "__m/_chart";
+@import "__m/_day";
+@import "__m/_table";
+
+.my-component {
+  padding:30px;
+}
+
+.show-parent {
+  display: none;
+}
+.show-child {
+  display: none;
+}
+.i-pull-left {
+  float: left;
+}
+.i-pull-right {
+  float: right
+}
+.i-pull-clear {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.hidden {
+  display: none;
+}
+.elli{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis
+}

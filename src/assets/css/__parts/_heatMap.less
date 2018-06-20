@@ -1,0 +1,26 @@
+//热力图私有样式
+@import "../__m/_base";
+@import "../__m/controls";
+@import "../__m/layout";
+.heat-map {
+  //padding:@box-padding;
+}
+#map {
+  position: relative;
+  height: 648px;
+}
+#container {
+  width: 100%;
+  height:648px;
+}
+.heat-map {
+  .search-map {
+    margin-bottom:@box-padding;
+    .ivu-select-item {
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+    }
+  }
+}

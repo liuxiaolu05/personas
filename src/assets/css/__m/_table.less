@@ -1,0 +1,141 @@
+tr.ivu-table-row-hover td ,.details-table .detail-con:hover{
+  background-color: #ddeaf3!important;
+}
+
+.table{
+  .ivu-table {
+    font-size:14px;
+    background-color: transparent;
+    .ivu-table-header {
+      border-radius: 3px 3px 0 0 ;
+    }
+
+    .ivu-table td {
+      background-color: #fff;
+    }
+
+    tr.ivu-table-row:nth-of-type(even) td{
+      background-color:#f0f3f5;
+    }
+    tr.ivu-table-row:nth-of-type(odd) td {
+      background-color: #fff;
+    }
+    th {
+      color: #fff;
+      background-color: #1a2229;
+      text-align: center;
+      line-height: 40px;
+    }
+    td {
+      height: 38px;
+      text-align: center;
+      color: #666666;
+    }
+  }
+  .ivu-table-border td {
+    border-color: #b2beca;
+  }
+  .ivu-table th {
+    border-right:0 none;
+  }
+  .ivu-table-body{
+    border-bottom:1px solid #b2beca;
+  }
+  .ivu-table-sort {
+    width: 11px;
+    height: 20px;
+  }
+  .ivu-table-sort i {
+    height: 12px;
+    line-height: 12px;
+  }
+  .ivu-icon-arrow-up-b:before {
+    content: "\f10d";
+    font-size: 16px;
+  }
+  .ivu-icon-arrow-down-b:before {
+    content: "\f104";
+    font-size: 16px;
+  }
+  .ivu-table-header thead .ivu-table-cell i{
+    font-style: normal
+  }
+}
+.ivu-page-options {
+  position: relative;
+  min-width:210px;
+  min-height:25px;
+  .ivu-page-item a {
+    font-size:14px;
+  }
+   .ivu-page-options-sizer {
+     position: absolute;
+     right:0;
+     margin-right: 0px;
+     .ivu-select-selected-value {
+       font-size:13px;
+     }
+  }
+   .ivu-page-options-elevator {
+    position: absolute;
+    left:0;
+    margin-right: 10px;
+      input{
+        font-size:14px;
+      }
+  }
+}
+.page {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  margin-top:10px;
+  .ivu-page-total{
+    vertical-align: middle;
+  }
+  .ivu-select {
+    width:100%;
+  }
+  .ivu-select-selection{
+    border: 1px solid #fff;
+  }
+  .ivu-page-options{
+    vertical-align: top;
+  }
+  .ivu-page.mini .ivu-page-options-elevator{
+    line-height: 22px;
+    height: 24px;
+  }
+  .ivu-select-small.ivu-select-single .ivu-select-selection .ivu-select-selected-value{
+    line-height: 20px;
+  }
+  .ivu-page.mini .ivu-page-options-elevator input{
+    height: 24px;
+  }
+}
+.i-pull-left {
+  float: left;
+}
+.i-pull-right {
+  float: right
+}
+.i-pull-clear {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.hidden {
+  display: none;
+}
+.elli{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis
+}

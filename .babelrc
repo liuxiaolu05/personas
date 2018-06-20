@@ -1,0 +1,28 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      },
+      "useBuiltIns": true
+    }],
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-vue-jsx", "transform-runtime","transform-es2015-modules-commonjs",
+    ["import", [
+      {
+        "libraryName": "iview",
+        "libDir": "src/components",
+        "libraryDirectory": "src/components",
+        "style": false
+      }
+    ]],
+    ["component",  {
+      "libraryName": "mint-ui",
+      "libDir": "lib",
+      "style": true
+    }]
+  ]
+}
